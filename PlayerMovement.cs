@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Respawn();
             Time.timeScale = 0f;
-            FindObjectOfType<QuizManager>().StartQuiz();
+            //FindObjectOfType<QuizManager>().StartQuiz();
         }
         else if (collision.tag == "Checkpoint")
         {
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
             if (!collision.gameObject.activeSelf) return;
 
             Scoring.totalScore += 1;
-            scoreText.text = " " + Scoring.totalScore;
+            scoreText.text = " Score : " + Scoring.totalScore;
             collision.gameObject.SetActive(false);
         }
     }
@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Respawn();
             Time.timeScale = 0f;
-            FindObjectOfType<QuizManager>().StartQuiz();
+            //FindObjectOfType<QuizManager>().StartQuiz();
         }
     }
 }
